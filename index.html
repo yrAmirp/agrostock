@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
   <title>AGROSTOCK</title>
 </head>
@@ -15,56 +15,403 @@
     <header class="header">
       <div class="header__left">
         <div class="logo"></div>
-        <div class="language-switcher"></div>
-        <div class="language-switcher"></div>
+        <div class="language-switcher">
+          <span class="language-switcher__main">EN</span>
+          <span class="language-switcher__icon"></span>
+        </div>
+        <div class="language-switcher">
+          <span class="language-switcher__main language-switcher__main--flag"></span>
+          <span class="language-switcher__icon"></span>
+        </div>
       </div>
       <div class="header__right">
         <nav class="navigation">
-          <ul>
+          <ul class="navigation__list">
             <li><a href="/main">Главная</a></li>
             <li><a href="/about">О проекте</a></li>
             <li><a href="/news">Новости</a></li>
             <li><a href="/contacts">Контакты</a></li>
           </ul>
         </nav>
-        <a class="create-auction-btn"></a>
-        <a class="sing-in-btn"></a>
+        <a class="header__btn create-auction-btn btn btn--green-secondary btn--round">Создать торги <span class="create-auction-btn__icon"></span></a>
+        <a class="header__btn sing-in-btn btn btn--green-primary btn--round">Войти <span class="sing-in-btn__icon"></span></a>
+        <a class=""></a>
       </div>
     </header>
-    <section class="filters"></section>
-    <section class="stock"></section>
+    <section class="filters">
+      <div class="filters__btns">
+        <button class="filters__btn btn btn--green-primary btn--rectangle">Продать</button>
+        <button class="filters__btn btn btn--green-secondary btn--rectangle">Купить</button>
+      </div>
+      <div class="filters__items">
+        <div class="filters__select">
+          <span class="filters__icon filters__icon--burger"></span>
+          <span class="filters__text">Фрукты</span>
+          <span class="filters__icon filters__icon--chevron-down"></span>
+        </div>
+        <div class="filters__select">
+          <span class="filters__icon filters__icon--map-pin"></span>
+          <span class="filters__text">Махачкала</span>
+          <span class="filters__icon filters__icon--chevron-down"></span>
+        </div>
+        <div class="filters__select">
+          <span class="filters__icon filters__icon--search"></span>
+          <span class="filters__text">Яблоки</span>
+        </div>
+      </div>
+      <button class="filters__btn-search btn btn--rectangle">Поиск</button>
+    </section>
+    <section class="stock">
+      <div class="stock__left">
+        <div class="stock__header section-header">
+          <h2 class="stock__title section-title">
+            Акции
+          </h2>
+          <div class="stock__control-btns">
+            <button class="btn stock__control-btn stock__control-btn--prev">
+              <span class="stock__control-btn-icon"></span>
+            </button>
+            <button class="btn stock__control-btn stock__control-btn--next">
+              <span class="stock__control-btn-icon"></span>
+            </button>
+          </div>
+        </div>
+        <div class="promotion-card">
+          <div class="promotion-card__logo">
+          </div>
+          <div class="promotion-card__title">Маркетплейс <br> и биржа агропродуктов</div>
+          <div class="promotion-card__subtitle">
+            Уникальная площадка, объединяющая возможности маркетплейса и биржи 
+          </div>
+        </div>
+      </div>
+      <div class="stock__right">
+        <div class="stock__header section-header"> 
+          <div class="stock__header-left">
+            <h2 class="stock__title section-title">Топ предложения</h2>
+            <button class="stock__header-btn btn btn--green-secondary btn--round ">Показать всё</button>
+          </div>
+          <div class="stock__control-btns">
+            <button class="btn stock__control-btn stock__control-btn--prev">
+              <span class="stock__control-btn-icon"></span>
+            </button>
+            <button class="btn stock__control-btn stock__control-btn--next">
+              <span class="stock__control-btn-icon"></span>
+            </button>
+          </div>
+        </div>
+        <div class="stock__list">
+          <div class="stock__card card-last-offer">
+            <div class="card-last-offer__img">
+              <img src="./img/stock/malina.jfif" alt="Malina">
+            </div>
+            <div class="card-last-offer__title">Средиземноморская малина крупная</div>
+            <div class="card-last-offer__price-block">
+              <div class="card-last-offer__price card-last-offer__cut-price">690 ₽/кг</div>
+              <div class="card-last-offer__old-price">1080 ₽/кг</div>
+            </div>
+            <button class="card-last-offer__btn btn btn--green-primary btn--rectangle">К торгам <span class="card-last-offer__btn-icon card-last-offer__icon"></span></button>
+          </div>
+          <div class="stock__card card-last-offer">
+            <div class="card-last-offer__img">
+              <img src="./img/stock/mandarin.jfif" alt="Malina">
+            </div>
+            <div class="card-last-offer__title">Пекинские мандарины летние</div>
+            <div class="card-last-offer__price-block">
+              <div class="card-last-offer__price card-last-offer__cut-price">290 ₽/кг</div>
+              <div class="card-last-offer__old-price">400 ₽/кг</div>
+            </div>
+            <button class="card-last-offer__btn btn btn--green-primary btn--rectangle">К торгам <span class="card-last-offer__btn-icon card-last-offer__icon"></span></button>
+          </div>
+          <div class="stock__card card-last-offer">
+            <div class="card-last-offer__img">
+              <img src="./img/stock/apples.jfif" alt="Malina">
+            </div>
+            <div class="card-last-offer__title">Зимние красные яблоки</div>
+            <div class="card-last-offer__price-block">
+              <div class="card-last-offer__price">390 ₽/кг</div>
+            </div>
+            <button class="card-last-offer__btn btn btn--green-primary btn--rectangle">К торгам <span class="card-last-offer__btn-icon card-last-offer__icon"></span></button>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="special">
-      <h3 class="special__title section-title">
+      <h2 class="special__title section-title">
         Специально для вас
-      </h3>
+      </h2>
       <div class="special__list">
         <div class="special__card card-special">
           <h4 class="card-special__title">Котировки цен</h4>
           <p class="card-special__description">Мы анализируем динамику изменения цен по всем группам товаров</p>
-          <button class="card-special__btn btn rectangle-btn green-btn">Смотреть котировку</button>
+          <button class="card-special__btn btn btn--rectangle btn--green-primary">Смотреть котировку</button>
           <div class="card-special__icon"></div>
         </div>
         <div class="special__card card-special">
           <h4 class="card-special__title">Предложения дня</h4>
           <p class="card-special__description">Вы можете находить лучшие 
             предложения дня в этом разделе</p>
-          <button class="card-special__btn btn rectangle-btn green-btn">Смотреть котировку</button>
+          <button class="card-special__btn btn btn--rectangle btn--green-primary">К предложениям</button>
           <div class="card-special__icon"></div>
         </div>
         <div class="special__card card-special">
           <h4 class="card-special__title">Зарубежные предложения</h4>
           <p class="card-special__description">В этом разделе Вы можете найти товары зарубежных партнеров</p>
-          <button class="card-special__btn btn rectangle-btn green-btn">Смотреть котировку</button>
+          <button class="card-special__btn btn btn--rectangle btn--green-primary">К предложениям</button>
           <div class="card-special__icon"></div>
         </div>
       </div>
     </section>
-    <section class="categories"></section>
-    <section class="last-offer"></section>
-    <section class="news"></section>
+    <section class="categories">
+      <div class="categories__header section-header">
+        <h2 class="categories__title section-title">Категории товаров</h2>
+      </div>
+      <div class="categories__list">
+        <button class="btn categories__btn categories__btn--active ">
+          <span class="categories__btn-icon"></span>
+          <span class="categories__btn-text">Фрукты</span>
+          <span class="categories__btn-amount">(3)</span>
+        </button>
+        <button class="btn categories__btn">
+          <span class="categories__btn-icon"></span>
+          <span class="categories__btn-text">Сушёные фрукты, ягоды и овощи</span>
+          <span class="categories__btn-amount">(124)</span>
+        </button>
+        <button class="btn categories__btn">
+          <span class="categories__btn-icon"></span>
+          <span class="categories__btn-text">Сладости и кондитерские изделия </span>
+          <span class="categories__btn-amount">(1024)</span>
+        </button>
+        <button class="btn categories__btn">
+          <span class="categories__btn-icon"></span>
+          <span class="categories__btn-text">Семена и посадочный материал</span>
+          <span class="categories__btn-amount">(1024)</span>
+        </button>
+        <button class="btn categories__btn">
+          <span class="categories__btn-icon"></span>
+          <span class="categories__btn-text">Сушёные фрукты, ягоды и овощи</span>
+          <span class="categories__btn-amount">(124)</span>
+        </button>
+        <button class="btn categories__btn">
+          <span class="categories__btn-icon"></span>
+          <span class="categories__btn-text">Сладости и кондитерские изделия </span>
+          <span class="categories__btn-amount">(1024)</span>
+        </button>
+        <button class="btn categories__btn">
+          <span class="categories__btn-icon"></span>
+          <span class="categories__btn-text">Семена и посадочный материал</span>
+          <span class="categories__btn-amount">(1024)</span>
+        </button>
+        <button class="btn categories__btn">
+          <span class="categories__btn-text">Ещё</span>
+          <span class="categories__btn-icon"></span>
+        </button>
+      </div>
+    </section>
+    <section class="last-offer">
+      <div class="last-offer__header section-header">
+        <h2 class="last-offer__title section-title">Последние предложения</h2>
+        <button class="last-offer__header-btn btn btn--green-secondary btn--round ">Показать всё</button>
+      </div>
+      <div class="last-offer__list">
+        <div class="last-offer__card card-last-offer">
+          <div class="card-last-offer__img">
+            <img src="./img/stock/malina.jfif" alt="Malina">
+            <div class="card-last-offer__chips-list">
+              <div class="card-last-offer__chips card-last-offer__chips--green">Акция</div>
+              <div class="card-last-offer__chips card-last-offer__chips--orange">Топ предложение</div>
+            </div>
+          </div>
+          <div class="card-last-offer__additional-info">
+            <div class="card-last-offer__address">
+              <span class="card-last-offer__icon card-last-offer__address-icon"></span>
+              <span class="card-last-offer__address-text">ул. Московская, г. Махачкала</span>
+            </div>
+            <div class="card-last-offer__time">
+              <span class="card-last-offer__icon card-last-offer__time-icon"></span>
+              <span class="card-last-offer__time-text">7 мес назад</span>
+            </div>
+          </div>
+          <div class="card-last-offer__title">Средиземноморская малина крупная</div>
+          <div class="card-last-offer__price-block">
+            <div class="card-last-offer__price card-last-offer__cut-price">690 ₽/кг</div>
+            <div class="card-last-offer__old-price">1080 ₽/кг</div>
+          </div>
+          <button class="card-last-offer__btn btn btn--green-primary btn--rectangle">Перейти <span class="card-last-offer__btn-icon card-last-offer__icon"></span></button>
+        </div>
+        <div class="last-offer__card card-last-offer">
+          <div class="card-last-offer__img">
+            <img src="./img/stock/mandarin.jfif" alt="Malina">
+            <div class="card-last-offer__chips-list">
+              <div class="card-last-offer__chips card-last-offer__chips--green">Акция</div>
+              <div class="card-last-offer__chips card-last-offer__chips--orange">Топ предложение</div>
+            </div>
+          </div>
+          <div class="card-last-offer__additional-info">
+            <div class="card-last-offer__address">
+              <span class="card-last-offer__icon card-last-offer__address-icon"></span>
+              <span class="card-last-offer__address-text">ул. Московская, г. Махачкала</span>
+            </div>
+            <div class="card-last-offer__time">
+              <span class="card-last-offer__icon card-last-offer__time-icon"></span>
+              <span class="card-last-offer__time-text">7 мес назад</span>
+            </div>
+          </div>
+          <div class="card-last-offer__title">Пекинские мандарины летние</div>
+          <div class="card-last-offer__price-block">
+            <div class="card-last-offer__price card-last-offer__cut-price">290 ₽/кг</div>
+            <div class="card-last-offer__old-price">400 ₽/кг</div>
+          </div>
+          <button class="card-last-offer__btn btn btn--green-primary btn--rectangle">Перейти <span class="card-last-offer__btn-icon card-last-offer__icon"></span></button>
+        </div>
+        <div class="last-offer__card card-last-offer">
+          <div class="card-last-offer__img">
+            <img src="./img/stock/apples.jfif" alt="Malina">
+          </div>
+          <div class="card-last-offer__additional-info">
+            <div class="card-last-offer__address">
+              <span class="card-last-offer__icon card-last-offer__address-icon"></span>
+              <span class="card-last-offer__address-text">ул. Московская, г. Махачкала</span>
+            </div>
+            <div class="card-last-offer__time">
+              <span class="card-last-offer__icon card-last-offer__time-icon"></span>
+              <span class="card-last-offer__time-text">7 мес назад</span>
+            </div>
+          </div>
+          <div class="card-last-offer__title">Зимние красные яблоки</div>
+          <div class="card-last-offer__price-block">
+            <div class="card-last-offer__price">390 ₽/кг</div>
+          </div>
+          <button class="card-last-offer__btn btn btn--green-primary btn--rectangle">Перейти <span class="card-last-offer__btn-icon card-last-offer__icon"></span></button>
+        </div>
+        <div class="last-offer__card card-last-offer">
+          <div class="card-last-offer__img">
+            <img src="./img/last-offer/pear.png" alt="Malina">
+          </div>
+          <div class="card-last-offer__additional-info">
+            <div class="card-last-offer__address">
+              <span class="card-last-offer__icon card-last-offer__address-icon"></span>
+              <span class="card-last-offer__address-text">ул. Московская, г. Махачкала</span>
+            </div>
+            <div class="card-last-offer__time">
+              <span class="card-last-offer__icon card-last-offer__time-icon"></span>
+              <span class="card-last-offer__time-text">7 мес назад</span>
+            </div>
+          </div>
+          <div class="card-last-offer__title">Груша позднего сорта</div>
+          <div class="card-last-offer__price-block">
+            <div class="card-last-offer__price">490 ₽/кг</div>
+          </div>
+          <button class="card-last-offer__btn btn btn--green-primary btn--rectangle">Перейти <span class="card-last-offer__btn-icon card-last-offer__icon"></span></button>
+        </div>
+      </div>
+    </section>
+    <section class="news">
+      <div class="news__header section-header">
+        <h2 class="news__title section-title">Новости</h2>
+        <button class="news__header-btn btn btn--green-secondary btn--round ">Показать всё</button>
+      </div>
+      <div class="news__list">
+        <div class="news__card card-news">
+          <div class="card-news__img">
+            <img src="./img/news/mindal.jpg" alt="Миндаль">
+          </div>
+          <div class="card-news__date">02 сен, 2020</div>
+          <h3 class="card-news__title">Австралийские садоводы ожидают рекордного урожая миндаля</h3>
+          <div class="card-news__more">
+            Подробнее
+          </div>
+        </div>
+        <div class="news__card card-news">
+          <div class="card-news__img">
+            <img src="./img/news/arahis.jpg" alt="Миндаль">
+          </div>
+          <div class="card-news__date">02 сен, 2020</div>
+          <h3 class="card-news__title">В турции начат проект по наращиванию производства арахиса</h3>
+          <div class="card-news__more">
+            Подробнее
+          </div>
+        </div>
+        <div class="news__card card-news">
+          <div class="card-news__img">
+            <img src="./img/news/arahis2.jpg" alt="Миндаль">
+          </div>
+          <div class="card-news__date">02 сен, 2020</div>
+          <h3 class="card-news__title">Россельхознадзор сообщил о запрете с 1 мая импорта арахиса из США</h3>
+          <div class="card-news__more">
+            Подробнее
+          </div>
+        </div>
+        <div class="news__card card-news">
+          <div class="card-news__img">
+            <img src="./img/news/arahis2.jpg" alt="Миндаль">
+          </div>
+          <div class="card-news__date">02 сен, 2020</div>
+          <h3 class="card-news__title">Россельхознадзор сообщил о запрете с 1 мая импорта арахиса из США</h3>
+          <div class="card-news__more">
+            Подробнее
+          </div>
+        </div>
+      </div>
+    </section>
     <footer class="footer">
-      <div class="top-footer"></div>
-      <div class="bottom-footer"></div>
+      <div class="top-footer">
+        <div class="top-footer__left top-footer-left">
+          <div class="top-footer-left__main">
+            <div class="logo"></div>
+            <div class="language-switcher">
+              <span class="language-switcher__main">EN</span>
+              <span class="language-switcher__icon"></span>
+            </div>
+            <div class="language-switcher">
+              <span class="language-switcher__main language-switcher__main--flag"></span>
+              <span class="language-switcher__icon"></span>
+            </div>
+          </div>
+          <div class="top-footer-left__text">
+            Уникальная площадка, объединяющая возможности <br> маркетплейса и биржи 
+          </div>
+        </div>
+        <div class="top-footer__right top-footer-right">
+          <div class="top-footer-right__item">
+            <div class="top-footer-right__item-title">Мой аккаунт</div>
+            <div class="top-footer-right__item-content">
+              <a href="/" class="top-footer-right__item-content-link">Вход</a>
+              <a href="/" class="top-footer-right__item-content-link">Регистрация</a>
+            </div>
+          </div>
+          <div class="top-footer-right__item">
+            <div class="top-footer-right__item-title">Помощь и поддержка</div>
+            <div class="top-footer-right__item-content">
+              <a href="/" class="top-footer-right__item-content-link">Вопросы-ответы</a>
+              <a href="/" class="top-footer-right__item-content-link">Обратная связь</a>
+              <a href="/" class="top-footer-right__item-content-link">Контакты</a>
+            </div>
+          </div>
+          <div class="top-footer-right__item">
+            <div class="top-footer-right__item-title">Информация</div>
+            <div class="top-footer-right__item-content">
+              <a href="/" class="top-footer-right__item-content-link">Страны</a>
+              <a href="/" class="top-footer-right__item-content-link">Карта сайта</a>
+              <a href="/" class="top-footer-right__item-content-link">Безопасная сделка</a>
+              <a href="/" class="top-footer-right__item-content-link">Умный подбор</a>
+            </div>
+          </div>
+          <div class="top-footer-right__item">
+            <div class="top-footer-right__item-title">Соц сети</div>
+            <div class="top-footer-right__item-content">
+              <a href="/" class="top-footer-right__item-content-link">Instagram</a>
+              <a href="/" class="top-footer-right__item-content-link">Telegram</a>
+              <a href="/" class="top-footer-right__item-content-link">FaceBook</a>
+              <a href="/" class="top-footer-right__item-content-link">VKontakte</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-footer">
+        <div class="bottom-footer__left">Copyright Ⓒ Agrostock 2021</div>
+        <div class="bottom-footer__right">Все права защищены</div>
+      </div>
     </footer>
   </div>
 </body>
